@@ -29,20 +29,26 @@ class Model {
         return !(Choice.None == player1Choice || Choice.None == player2Choice)
     }
     
+    func  winner() -> String {
+        if(player1Choice == player2Choice) {
+            return "Its a Tie"
+        }
+        
+        for ch in Model.conquers(choice: player1Choice) {
+            if(player2Choice == ch){
+                return "Player 1 wins"
+            }
+        }
+        
+        return "Player 2 wins"
+    }
+    
     func choosePlayer1(pick:Choice) {
         player1Choice = pick
     }
     
     func choosePlayer2(pick:Choice) {
         player2Choice = pick
-    }
-    
-    func  winner() -> String {
-        if(player1Choice == player2Choice) {
-            return "Its a Tie"
-        }
-        
-        retu
     }
     
     private static func conquers(choice:Choice) -> [Choice]  {
