@@ -9,11 +9,19 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+        <array key="Papyrus.ttc">
+            <string>Papyrus</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Player 2-->
         <scene sceneID="zCT-LN-65i">
             <objects>
-                <viewController id="qN2-Al-7X9" sceneMemberID="viewController">
+                <viewController id="qN2-Al-7X9" customClass="Player2ViewController" customModule="RPC_Bondalapati" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DIV-Ev-oTV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +32,9 @@
                                 <state key="normal" title="Rock" image="icons8-hand-rock-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="rockBTN:" destination="qN2-Al-7X9" eventType="touchUpInside" id="LIa-LQ-PYG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFP-3f-pvY">
                                 <rect key="frame" x="63" y="285" width="100" height="50"/>
@@ -31,6 +42,9 @@
                                 <state key="normal" title="Lizard" image="icons8-hand-lizard-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="lizardBTN:" destination="qN2-Al-7X9" eventType="touchUpInside" id="gS0-Xg-HFM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWj-gh-rp1">
                                 <rect key="frame" x="19" y="165" width="101" height="50"/>
@@ -38,6 +52,9 @@
                                 <state key="normal" title="Spock" image="icons8-spock-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="spockBTN:" destination="qN2-Al-7X9" eventType="touchUpInside" id="sEd-64-CQE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwi-v9-0BH">
                                 <rect key="frame" x="165" y="92" width="110" height="50"/>
@@ -45,6 +62,9 @@
                                 <state key="normal" title="Scissor" image="icons8-hand-scissors-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="scissorBTN:" destination="qN2-Al-7X9" eventType="touchUpInside" id="RnV-3c-Iz9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhL-d3-q9Z">
                                 <rect key="frame" x="259" y="205" width="97" height="50"/>
@@ -52,12 +72,33 @@
                                 <state key="normal" title="Paper" image="icons8-hand-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="paperBTN:" destination="qN2-Al-7X9" eventType="touchUpInside" id="H9R-ip-OQr"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAE-d2-VK5">
+                                <rect key="frame" x="19" y="35" width="337" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-3A-NE8">
+                                <rect key="frame" x="19" y="477" width="337" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68199486149999999" green="0.86637791450000001" blue="0.6286963726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bzr-pC-sLS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 2" image="icons8-minion-filled-25" id="FXy-ec-ueH"/>
+                    <connections>
+                        <outlet property="commentLBL" destination="xZa-3A-NE8" id="9SP-ws-5Ly"/>
+                        <outlet property="resultLBL" destination="TAE-d2-VK5" id="Feg-9r-acR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDq-vK-bMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +107,7 @@
         <!--Player 1-->
         <scene sceneID="0jT-dj-s14">
             <objects>
-                <viewController id="XiQ-R8-WKs" customClass="Player1ViewController" customModule="RPC_Bondalapati" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XiQ-R8-WKs" customClass="Player1ViewController" customModule="RPC_Bondalapati" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dZ9-wM-NJv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +118,9 @@
                                 <state key="normal" title="Rock" image="icons8-hand-rock-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="rockBTN:" destination="XiQ-R8-WKs" eventType="touchUpInside" id="XkG-g8-muf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqI-qF-Hwt">
                                 <rect key="frame" x="63" y="285" width="100" height="50"/>
@@ -84,6 +128,9 @@
                                 <state key="normal" title="Lizard" image="icons8-hand-lizard-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="lizardBTN:" destination="XiQ-R8-WKs" eventType="touchUpInside" id="Boj-Qc-GDy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-ud-fZ4">
                                 <rect key="frame" x="19" y="165" width="101" height="50"/>
@@ -91,6 +138,9 @@
                                 <state key="normal" title="Spock" image="icons8-spock-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="spockBTN:" destination="XiQ-R8-WKs" eventType="touchUpInside" id="yfs-8Y-tKo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye2-1R-4Og">
                                 <rect key="frame" x="259" y="205" width="97" height="50"/>
@@ -98,6 +148,9 @@
                                 <state key="normal" title="Paper" image="icons8-hand-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="paperBTN:" destination="XiQ-R8-WKs" eventType="touchUpInside" id="edm-G9-2JN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoR-92-MVx">
                                 <rect key="frame" x="165" y="92" width="110" height="50"/>
@@ -105,32 +158,139 @@
                                 <state key="normal" title="Scissor" image="icons8-hand-scissors-50">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="scissorBTN:" destination="XiQ-R8-WKs" eventType="touchUpInside" id="j0g-9G-nfO"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0Q-AI-TFl">
+                                <rect key="frame" x="19" y="35" width="337" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKc-bE-NHi">
+                                <rect key="frame" x="19" y="477" width="337" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.68199486149999999" green="0.86637791450000001" blue="0.6286963726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="QGm-aV-DFH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 1" image="icons8-minion-25" id="mvB-lC-jO2"/>
+                    <connections>
+                        <outlet property="commentLBL" destination="AKc-bE-NHi" id="bvg-Tb-jaS"/>
+                        <outlet property="resultLBL" destination="o0Q-AI-TFl" id="Iie-Y9-f07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcQ-EQ-c8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="-376"/>
+            <point key="canvasLocation" x="-383.19999999999999" y="-376.46176911544228"/>
         </scene>
         <!--Result-->
         <scene sceneID="cBj-Bb-PCU">
             <objects>
-                <viewController id="gT4-4e-Raa" sceneMemberID="viewController">
+                <viewController id="gT4-4e-Raa" customClass="ResultViewController" customModule="RPC_Bondalapati" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5p-5S-whl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-7o-FbI">
+                                <rect key="frame" x="16" y="121" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-jB-jeK">
+                                <rect key="frame" x="159" y="318" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBTN:" destination="gT4-4e-Raa" eventType="touchUpInside" id="CtE-fA-MgA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-lT-ab7">
+                                <rect key="frame" x="16" y="213" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiQ-0x-P5y">
+                                <rect key="frame" x="16" y="255" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rock, Paper, Scissor, Spock &amp; Lizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-Rb-vFA">
+                                <rect key="frame" x="16" y="29" width="343" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make your selections and play around" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mo-9Y-HPF">
+                                <rect key="frame" x="16" y="530" width="343" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player  1: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-qJ-URp">
+                                <rect key="frame" x="33" y="373" width="85" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jza-cr-ACl">
+                                <rect key="frame" x="33" y="414" width="85" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-OH-gaX">
+                                <rect key="frame" x="139" y="372" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="player1NameACT:" destination="gT4-4e-Raa" eventType="editingDidEnd" id="vSu-aT-UK3"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bug-Rp-GU7">
+                                <rect key="frame" x="139" y="414" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="player2NameAct:" destination="gT4-4e-Raa" eventType="editingDidEnd" id="Bji-wS-CKV"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.68199486147749633" green="0.86637791450777202" blue="0.62869637258888278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="aM4-j1-Ngb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Result" image="icons8-leaderboard-25" id="PA2-Jg-Jpg"/>
+                    <connections>
+                        <outlet property="player1LBL" destination="kEl-lT-ab7" id="fzu-k4-5eU"/>
+                        <outlet property="player1NameTF" destination="6cp-OH-gaX" id="F8B-4H-kLn"/>
+                        <outlet property="player2LBL" destination="iiQ-0x-P5y" id="Ypg-9B-ElP"/>
+                        <outlet property="player2NameTF" destination="bug-Rp-GU7" id="Vvl-tE-aOv"/>
+                        <outlet property="resultLBL" destination="W1Y-7o-FbI" id="LnS-gQ-McL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JL-Zx-EVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1170" y="-1066"/>
+            <point key="canvasLocation" x="-1170.4000000000001" y="-1066.4167916041979"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nqh-gA-GSF">

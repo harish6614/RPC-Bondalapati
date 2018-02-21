@@ -15,6 +15,7 @@
 		130EAAD9203BEC0B007C82AB /* Player1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130EAAD8203BEC0B007C82AB /* Player1ViewController.swift */; };
 		1369DC32203CB8B6004E3606 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1369DC31203CB8B6004E3606 /* Model.swift */; };
 		1369DC34203CB93F004E3606 /* Player2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1369DC33203CB93F004E3606 /* Player2ViewController.swift */; };
+		137591B2203CE45E005386A7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137591B1203CE45E005386A7 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		130EAAD8203BEC0B007C82AB /* Player1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player1ViewController.swift; sourceTree = "<group>"; };
 		1369DC31203CB8B6004E3606 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1369DC33203CB93F004E3606 /* Player2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player2ViewController.swift; sourceTree = "<group>"; };
+		137591B1203CE45E005386A7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +65,13 @@
 				130EAAC6203BC578007C82AB /* AppDelegate.swift */,
 				130EAAC8203BC578007C82AB /* ViewController.swift */,
 				130EAACA203BC578007C82AB /* Main.storyboard */,
-				130EAAD8203BEC0B007C82AB /* Player1ViewController.swift */,
 				1369DC31203CB8B6004E3606 /* Model.swift */,
 				130EAACD203BC578007C82AB /* Assets.xcassets */,
+				130EAAD8203BEC0B007C82AB /* Player1ViewController.swift */,
 				1369DC33203CB93F004E3606 /* Player2ViewController.swift */,
 				130EAACF203BC578007C82AB /* LaunchScreen.storyboard */,
 				130EAAD2203BC578007C82AB /* Info.plist */,
+				137591B1203CE45E005386A7 /* ResultViewController.swift */,
 			);
 			path = "RPC-Bondalapati";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				130EAAC7203BC578007C82AB /* AppDelegate.swift in Sources */,
 				1369DC34203CB93F004E3606 /* Player2ViewController.swift in Sources */,
 				1369DC32203CB8B6004E3606 /* Model.swift in Sources */,
+				137591B2203CE45E005386A7 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

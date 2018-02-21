@@ -8,47 +8,74 @@
 
 enum Choice { case None, Rock, Paper, Scissor, Spock, Lizard}
 
-class Model {
-    private var player1Choice:Choice
-    private var player2Choice:Choice
+class RSPModel {
     
-    var player1:Choice { get { return player1Choice } }
-    var player2:Choice { get { return player1Choice } }
+    private var _player1Choice:Choice
+    private var _player2Choice:Choice
+    private var _player1WinsCount:Int
+    private var _player2WinsCount:Int
+    private var _player1Name:String
+    private var _player2Name:String
     
-    private init(){
-        player1Choice = Choice.None
-        player2Choice = Choice.None
+    static var instance:RSPModel = RSPModel()
+    
+    var player1Choice:Choice { get { return _player1Choice } }
+    var player2Choice:Choice { get { return _player2Choice } }
+    var player1WinsCount:Int { get { return _player1WinsCount } }
+    var player2WinsCount:Int { get { return _player2WinsCount } }
+    var player1Name:String {
+        get { return _player1Name }
+        set { _player1Name = newValue }
+    }
+    var player2Name:String {
+        get { return _player2Name }
+        set { _player2Name = newValue }
+    }
+    
+    private init() {
+        _player1Choice = Choice.None
+        _player2Choice = Choice.None
+        _player1WinsCount = 0
+        _player2WinsCount = 0
+        _player1Name = "Player One"
+        _player2Name = "Player Two"
     }
     
     func reset() {
-        player1Choice = Choice.None
-        player2Choice = Choice.None
+        _player1Choice = Choice.None
+        _player2Choice = Choice.None
+        _player1WinsCount = 0
+        _player2WinsCount = 0
+        _player1Name = "Player One"
+        _player1Name = "Player Two"
     }
     
     func haveResult() -> Bool {
-        return !(Choice.None == player1Choice || Choice.None == player2Choice)
+        return !(Choice.None == _player1Choice || Choice.None == _player2Choice)
     }
     
     func  winner() -> String {
-        if(player1Choice == player2Choice) {
+        if _player1Choice == player2Choice {
             return "Its a Tie"
         }
         
-        for ch in Model.conquers(choice: player1Choice) {
-            if(player2Choice == ch){
+        for ch in RSPModel.conquers(choice: player1Choice) {
+            if _player2Choice == ch {
+                _player1WinsCount += 1
                 return "Player 1 wins"
             }
         }
         
+        _player2WinsCount += 1
         return "Player 2 wins"
     }
     
     func choosePlayer1(pick:Choice) {
-        player1Choice = pick
+        _player1Choice = pick
     }
     
     func choosePlayer2(pick:Choice) {
-        player2Choice = pick
+        _player2Choice = pick
     }
     
     private static func conquers(choice:Choice) -> [Choice]  {
