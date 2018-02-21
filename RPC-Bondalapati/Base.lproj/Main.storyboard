@@ -95,10 +95,6 @@
                         <viewLayoutGuide key="safeArea" id="bzr-pC-sLS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 2" image="icons8-minion-filled-25" id="FXy-ec-ueH"/>
-                    <connections>
-                        <outlet property="commentLBL" destination="xZa-3A-NE8" id="9SP-ws-5Ly"/>
-                        <outlet property="resultLBL" destination="TAE-d2-VK5" id="Feg-9r-acR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDq-vK-bMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,9 +198,6 @@
                                 <rect key="frame" x="159" y="318" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetBTN:" destination="gT4-4e-Raa" eventType="touchUpInside" id="CtE-fA-MgA"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-lT-ab7">
                                 <rect key="frame" x="16" y="213" width="343" height="34"/>
@@ -254,9 +247,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="player1NameACT:" destination="gT4-4e-Raa" eventType="editingDidEnd" id="vSu-aT-UK3"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bug-Rp-GU7">
                                 <rect key="frame" x="139" y="414" width="181" height="30"/>
@@ -264,9 +254,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="player2NameAct:" destination="gT4-4e-Raa" eventType="editingDidEnd" id="Bji-wS-CKV"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1Y-7o-FbI">
                                 <rect key="frame" x="16" y="73" width="343" height="70"/>
@@ -280,13 +267,6 @@
                         <viewLayoutGuide key="safeArea" id="aM4-j1-Ngb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Result" image="icons8-leaderboard-25" id="PA2-Jg-Jpg"/>
-                    <connections>
-                        <outlet property="player1LBL" destination="kEl-lT-ab7" id="fzu-k4-5eU"/>
-                        <outlet property="player1NameTF" destination="6cp-OH-gaX" id="F8B-4H-kLn"/>
-                        <outlet property="player2LBL" destination="iiQ-0x-P5y" id="Ypg-9B-ElP"/>
-                        <outlet property="player2NameTF" destination="bug-Rp-GU7" id="Vvl-tE-aOv"/>
-                        <outlet property="resultLBL" destination="W1Y-7o-FbI" id="LnS-gQ-McL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JL-Zx-EVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

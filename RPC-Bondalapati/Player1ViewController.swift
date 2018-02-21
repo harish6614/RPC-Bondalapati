@@ -52,9 +52,8 @@ class Player1ViewController: UIViewController {
         setChoice(choice: Choice.Spock)
     }
     
-    private func setChoice(choice: Choice){
-        setChoice(choice: choice)
-        resultLBL.text = "Selection made: \(choice)"
+    private func setChoice(pickedChoice: Choice){
+        resultLBL.text = "Selection made: \(pickedChoice)"
     }
     
     private func setComment(){
