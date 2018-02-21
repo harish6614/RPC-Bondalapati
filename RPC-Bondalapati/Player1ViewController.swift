@@ -33,23 +33,23 @@ class Player1ViewController: UIViewController {
     @IBOutlet weak var commentLBL: UILabel!
     
     @IBAction func scissorBTN(_ sender: Any) {
-        setChoice(choice: Choice.Scissor)
+        setChoice(pickedChoice: Choice.Scissor)
     }
     
     @IBAction func paperBTN(_ sender: Any) {
-        setChoice(choice: Choice.Paper)
+        setChoice(pickedChoice: Choice.Paper)
     }
     
     @IBAction func rockBTN(_ sender: Any) {
-        setChoice(choice: Choice.Rock)
+        setChoice(pickedChoice: Choice.Rock)
     }
     
     @IBAction func lizardBTN(_ sender: Any) {
-        setChoice(choice: Choice.Lizard)
+        setChoice(pickedChoice: Choice.Lizard)
     }
     
     @IBAction func spockBTN(_ sender: Any) {
-        setChoice(choice: Choice.Spock)
+        setChoice(pickedChoice: Choice.Spock)
     }
     
     private func setChoice(pickedChoice: Choice){
