@@ -95,6 +95,10 @@
                         <viewLayoutGuide key="safeArea" id="bzr-pC-sLS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 2" image="icons8-minion-filled-25" id="FXy-ec-ueH"/>
+                    <connections>
+                        <outlet property="commentLBL" destination="xZa-3A-NE8" id="bnb-sJ-yoX"/>
+                        <outlet property="resultLBL" destination="TAE-d2-VK5" id="BgM-BG-Cmx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDq-vK-bMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

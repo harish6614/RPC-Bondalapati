@@ -22,6 +22,59 @@ class Player2ViewController: UIViewController {
     }
     
 
+    override func viewWillAppear(_ animated: Bool) {
+        if AppDelegate.game.player2Choice == Choice.None {
+            resultLBL.text = "Make a selection."
+            commentLBL.text = ""
+        } else {
+            resultLBL.text = "Selection made: \(AppDelegate.game.player1Choice)"
+            setComment()
+        }
+    }
+    
+    @IBOutlet weak var resultLBL: UILabel!
+    @IBOutlet weak var commentLBL: UILabel!
+    
+    @IBAction func scissorBTN(_ sender: Any) {
+        setChoice(pickedChoice: Choice.Scissor)
+    }
+    
+    @IBAction func paperBTN(_ sender: Any) {
+        setChoice(pickedChoice: Choice.Paper)
+    }
+    
+    @IBAction func rockBTN(_ sender: Any) {
+        setChoice(pickedChoice: Choice.Rock)
+    }
+    
+    @IBAction func lizardBTN(_ sender: Any) {
+        setChoice(pickedChoice: Choice.Lizard)
+    }
+    
+    @IBAction func spockBTN(_ sender: Any) {
+        setChoice(pickedChoice: Choice.Spock)
+    }
+    
+    private func setChoice(pickedChoice: Choice){
+        AppDelegate.game.choosePlayer2(pick: pickedChoice)
+        resultLBL.text = "Selection made: \(pickedChoice)"
+        setComment()
+    }
+    
+    private func setComment(){
+        if AppDelegate.game.player1Choice != .None {
+            if AppDelegate.game.player1Choice == .None {
+                commentLBL.text = "Let Player 1 make their selection."
+            }
+            else {
+                commentLBL.text = "See Results!!!"
+            }
+        } else {
+            commentLBL.text = ""
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
